@@ -124,19 +124,14 @@ jobs:
             target: x86_64-unknown-linux-gnu
             gcc: x86-64-linux-gnu
             pkgconfig: x86_64-linux-gnu
-          - arch: armhf
-            target: armv7-unknown-linux-gnueabihf
-            gcc: arm-linux-gnueabihf
-            pkgconfig: arm-linux-gnueabihf
           - arch: arm64
             target: aarch64-unknown-linux-gnu
             gcc: aarch64-linux-gnu
             pkgconfig: aarch64-linux-gnu
-          - arch: i386
-            target: i686-unknown-linux-gnu
-            gcc: i686-linux-gnu
-            # on i686, the pkgconfig path doesn't match the prefix!
-            pkgconfig: i386-linux-gnu
+          - arch: mipsel
+             target: mips-unknown-linux-gnu
+             gcc: mips-linux-gnu
+             pkgconfig: mips-linux-gnu  
     steps:
       - uses: actions/checkout@v3
       - name: Install basic tools
